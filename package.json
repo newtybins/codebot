@@ -1,0 +1,20 @@
+{
+  "name": "twcodebot",
+  "version": "1.0.0",
+  "description": "A simple twitter retweet bot what retweets stuff related to coding.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "Jacob Smith (https://noneissome.github.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "twit": "^2.2.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1"
+  }
+}
