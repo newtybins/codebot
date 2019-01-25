@@ -3,6 +3,14 @@ require('dotenv').config();
 
 const twit = require('twit');
 
+const hashtags = [
+  '#nodejs',
+  '#100daysofcode',
+  '#javascript30',
+  '#301daysofcode',
+  '#coding'
+];
+
 // Create the bot instance
 const Twitter = new twit({
   consumer_key: process.env.CONSUMER_KEY, // Set consumer key
@@ -13,7 +21,7 @@ const Twitter = new twit({
 
 const retweet = () => {
   const params = {
-    q: '#nodejs, #Nodejs, #100daysofcode, #javascript30, #301daysofcode, #coding',
+    q: hashtags[Math.floor(Math.random() * hashtags.length)],
     result_type: 'recent',
     lang: 'en'
   }
