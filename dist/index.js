@@ -3,8 +3,9 @@
 // dotenv
 require('dotenv').config();
 
-var twit = require('twit'); // Create the bot instance
+var twit = require('twit');
 
+var hashtags = ['#nodejs', '#100daysofcode', '#javascript30', '#301daysofcode', '#coding']; // Create the bot instance
 
 var Twitter = new twit({
   consumer_key: process.env.CONSUMER_KEY,
@@ -18,7 +19,7 @@ var Twitter = new twit({
 
 var retweet = function retweet() {
   var params = {
-    q: '#nodejs, #Nodejs, #100daysofcode, #javascript30, #301daysofcode, #coding',
+    q: hashtags[Math.floor(Math.random() * hashtags.length)],
     result_type: 'recent',
     lang: 'en'
   };
