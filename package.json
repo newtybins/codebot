@@ -7,7 +7,7 @@
     "start": "node src/index.js"
   },
   "keywords": [],
-  "author": "Jacob Smith (https://noneissome.github.io/)",
+  "author": "Jacob Smith",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^6.2.0",
