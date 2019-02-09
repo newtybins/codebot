@@ -1,7 +1,7 @@
-// dotenv
-require('dotenv').config();
-
 const twit = require('twit');
+const path = require('path');
+const express = require('express');
+const app = express();
 
 const hashtags = [
   '#nodejs',
@@ -36,7 +36,7 @@ const retweet = () => {
       Twitter.post('statuses/retweet/:id', {
         id: retweetId
       }, (err, response) => {
-        if (response)
+          if (response)
           console.log('Retweeted!');
 
         if (err)
@@ -48,3 +48,9 @@ const retweet = () => {
 
 retweet();
 setInterval(retweet, 600000);
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname + '/index.html'));
+});
+
+app.listen(process.env.PORT, () => console.log(`Listening on port ${process.env.PORT}`));
