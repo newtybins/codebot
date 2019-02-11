@@ -1,5 +1,5 @@
 {
-  "name": "twcodebot",
+  "name": "codebot",
   "version": "1.0.0",
   "description": "A simple twitter retweet bot which retweets stuff related to coding.",
   "main": "index.js",
