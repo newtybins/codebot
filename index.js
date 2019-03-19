@@ -27,7 +27,8 @@ const run = () => {
 
     // POST retweet request
     Twitter.post('statuses/retweet/:id', { id }, err => {
-      if (err) return console.log(`The following error occured whilst retweeting. ${err}`); // catch errors
+      if (err === 'Error: You have already retweeted this Tweet.') return run(); // if it has already been retweeted, try again
+      else if (err) return console.log(`The following error occured whilst retweeting. ${err}`); // catch errors
 
 
       console.log('Retweeted!');
@@ -35,7 +36,8 @@ const run = () => {
     
     // POST like request
     Twitter.post('favorites/create', { id }, err => {
-      if (err) return console.log(`The following error occured whilst liking. ${err}`); // catch errors
+      if (err === 'Error: You have already favorited this status.') return run(); // if it has already been liked, try again
+      else if (err) return console.log(`The following error occured whilst liking. ${err}`); // catch errors
 
       console.log('Liked');
     })
