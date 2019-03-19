@@ -1,18 +1,17 @@
 {
   "name": "codebot",
-  "version": "1.0.0",
-  "description": "A simple twitter retweet bot which retweets stuff related to coding.",
+  "version": "1.1.0",
+  "private": true,
+  "description": "A simple twitter bot that does stuff related to coding.",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Jacob Smith",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4",
-    "path": "^0.12.7",
+    "dotenv": "^7.0.0",
     "twit": "^2.2.11"
-  },
-  "devDependencies": {}
+  }
 }
